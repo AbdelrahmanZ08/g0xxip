@@ -1,6 +1,7 @@
 import React from 'react'
-import { Instagram, Twitter } from 'lucide-react'
+import { Instagram } from 'lucide-react'
 import Link from 'next/link'
+import { XLogo } from './icons/x-logo'
 
 export function SocialLinks() {
   return (
@@ -19,9 +20,9 @@ export function SocialLinks() {
         target="_blank"
         rel="noopener noreferrer"
         className="text-white/70 transition-colors hover:text-white"
-        aria-label="Follow on X (formerly Twitter)"
+        aria-label="Follow on X"
       >
-        <Twitter className="h-6 w-6" />
+        <XLogo className="h-5 w-5" />
       </Link>
     </div>
   )
