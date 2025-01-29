@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
+import { SocialLinks } from '@/components/social-links'
 
 export const metadata: Metadata = {
   title: 'g0xxip - Music Portfolio',
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
+      <SocialLinks />
+      
       {/* Hero Section */}
       <section className="relative flex min-h-[80vh] items-center justify-center pt-20">
         <div className="absolute inset-0 z-0">
