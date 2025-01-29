@@ -1,101 +1,111 @@
-import Image from "next/image";
+import { Metadata } from 'next'
+import Image from 'next/image'
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'g0xxip - Music Portfolio',
+  description: 'Explore the latest tracks and music from g0xxip',
+}
+
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex min-h-screen flex-col">
+      {/* Hero Section */}
+      <section className="relative flex min-h-[80vh] items-center justify-center pt-20">
+        <div className="absolute inset-0 z-0">
+          <div className="h-full w-full bg-gradient-to-b from-purple-900 via-purple-800 to-black" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        
+        <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+          <div className="mb-8 flex justify-center">
+            <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-purple-300/20 shadow-lg shadow-purple-500/20">
+              <Image
+                src="/Images/g0xxip pfp.webp"
+                alt="g0xxip profile picture"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+          <h1 className="mb-6 text-6xl font-bold tracking-tighter text-white sm:text-7xl">
+            g0xxip
+          </h1>
+          <div className="mx-auto mb-8 max-w-3xl space-y-4 text-lg text-purple-100">
+            <p>
+              digital pop entity born from glitched san andreas speedruns and corrupted mp3s (◕‿◕✿) staying true to the y2k aesthetic while everyone else stays corporate. discovered music through faze montage edits and bedroom pop scratched that same itch fr fr.
+            </p>
+            <p>
+              living that flip phone lifestyle in 2025 because modern tech is literally psyop behavior ᕙ(⇀‸↼‶)ᕗ catch me making beats from broken nokia sounds while ur stuck with ur iphone garbage.
+            </p>
+            <p>
+              absolutely real for noticing banks was ahead of the curve every single time (˘▾˘) man predicted entire industries before they existed. also threadguy's hair situation is giving extremely based energy lately ngl.
+            </p>
+            <p>
+              frank gets it sometimes but could try harder tbh (；一_一) meanwhile bedroom pop scene stays undefeated. making actual groundbreaking sounds while everyone else follows charts like npcs.
+            </p>
+            <p>
+              been watching faze trick shots since birth literally changed everything ʕ •ᴥ•ʔ modern gaming could never compare to og montage era. call me cringe but staying authentic in 2025 means something.
+            </p>
+            <p>
+              squishmellows are literally propaganda to make everyone soft uwu (╯°□°）╯︵ ┻━┻ imagine collecting plushies when u could be learning san andreas speedrun tech.
+            </p>
+            <p className="font-mono text-purple-200">
+              ═══════════ ⋆⋅☆⋅⋆ ═══════════
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Music Section */}
+      <section className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24">
+        <h2 className="mb-12 text-3xl font-bold text-white">Latest Tracks</h2>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* 360noscope */}
+          <div className="rounded-lg bg-zinc-900 p-4 shadow-xl">
+            <iframe
+              width="100%"
+              height="300"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/g0xxip/360noscope&color=%23a855f7&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+            />
+          </div>
+
+          {/* deepseek-this */}
+          <div className="rounded-lg bg-zinc-900 p-4 shadow-xl">
+            <iframe
+              width="100%"
+              height="300"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/g0xxip/deepseek-this&color=%23a855f7&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+            />
+          </div>
+
+          {/* rugpull-romance */}
+          <div className="rounded-lg bg-zinc-900 p-4 shadow-xl">
+            <iframe
+              width="100%"
+              height="300"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/g0xxip/rugpull-romance-mp3&color=%23a855f7&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="mt-auto border-t border-zinc-800 py-6">
+        <div className="mx-auto max-w-6xl px-6">
+          <p className="text-center text-sm text-zinc-500">
+            © {new Date().getFullYear()} g0xxip. All rights reserved.
+          </p>
+        </div>
       </footer>
     </div>
-  );
+  )
 }
