@@ -9,16 +9,16 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col items-center">
       <SocialLinks />
       
       {/* Hero Section */}
-      <section className="relative flex min-h-[80vh] items-center justify-center pt-20">
-        <div className="absolute inset-0 z-0">
+      <section className="relative flex min-h-screen w-full flex-col">
+        <div className="absolute inset-0">
           <div className="h-full w-full bg-gradient-to-b from-purple-900 via-purple-800 to-black" />
         </div>
         
-        <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+        <div className="relative z-10 mx-auto max-w-5xl px-6 text-center pt-24">
           <div className="mb-8 flex justify-center">
             <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-purple-300/20 shadow-lg shadow-purple-500/20">
               <Image
@@ -60,55 +60,57 @@ export default function HomePage() {
       </section>
 
       {/* Music Section */}
-      <section className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24">
-        <h2 className="mb-12 text-3xl font-bold text-white">Latest Tracks</h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {/* 360noscope */}
-          <div className="rounded-lg border-2 border-purple-900/50 bg-zinc-900 p-4 shadow-xl shadow-purple-900/10">
-            <iframe
-              width="100%"
-              height="300"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/g0xxip/360noscope&color=%23a855f7&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
-            />
-          </div>
+      <section className="w-full bg-black py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <h2 className="mb-12 text-3xl font-bold text-white">Latest Tracks</h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* 360noscope */}
+            <div className="rounded-lg border-2 border-purple-900/50 bg-zinc-900 p-4 shadow-xl shadow-purple-900/10">
+              <iframe
+                width="100%"
+                height="300"
+                scrolling="no"
+                frameBorder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/g0xxip/360noscope&color=%23a855f7&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&show_sharing=false&show_playcount=false&show_user=false&visual=true&buying=false&download=false&show_artwork=false&single_active=false"
+              />
+            </div>
 
-          {/* deepseek-this */}
-          <div className="rounded-lg border-2 border-purple-900/50 bg-zinc-900 p-4 shadow-xl shadow-purple-900/10">
-            <iframe
-              width="100%"
-              height="300"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/g0xxip/deepseek-this&color=%23a855f7&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
-            />
-          </div>
+            {/* deepseek-this */}
+            <div className="rounded-lg border-2 border-purple-900/50 bg-zinc-900 p-4 shadow-xl shadow-purple-900/10">
+              <iframe
+                width="100%"
+                height="300"
+                scrolling="no"
+                frameBorder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/g0xxip/deepseek-this&color=%23a855f7&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&show_sharing=false&show_playcount=false&show_user=false&visual=true&buying=false&download=false&show_artwork=false&single_active=false"
+              />
+            </div>
 
-          {/* rugpull-romance */}
-          <div className="rounded-lg border-2 border-purple-900/50 bg-zinc-900 p-4 shadow-xl shadow-purple-900/10">
-            <iframe
-              width="100%"
-              height="300"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/g0xxip/rugpull-romance-mp3&color=%23a855f7&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
-            />
+            {/* rugpull-romance */}
+            <div className="rounded-lg border-2 border-purple-900/50 bg-zinc-900 p-4 shadow-xl shadow-purple-900/10">
+              <iframe
+                width="100%"
+                height="300"
+                scrolling="no"
+                frameBorder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/g0xxip/rugpull-romance-mp3&color=%23a855f7&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&show_sharing=false&show_playcount=false&show_user=false&visual=true&buying=false&download=false&show_artwork=false&single_active=false"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="mt-auto border-t border-zinc-800 py-6">
+      <footer className="w-full border-t border-zinc-800 py-6">
         <div className="mx-auto max-w-6xl px-6">
           <p className="text-center text-sm text-zinc-500">
             © {new Date().getFullYear()} g0xxip. All rights reserved.
           </p>
         </div>
       </footer>
-    </div>
+    </main>
   )
 }
