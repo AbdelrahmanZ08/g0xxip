@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist",
-});
+const geist = GeistSans;
 
 export const metadata: Metadata = {
   title: {
@@ -42,17 +39,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={cn("dark", geist.className)}>
       <head>
         <link rel="icon" type="image/webp" sizes="32x32" href="/favicon/favicon.webp" />
         <link rel="icon" type="image/webp" sizes="16x16" href="/favicon/favicon.webp" />
         <link rel="apple-touch-icon" type="image/webp" sizes="180x180" href="/favicon/favicon.webp" />
       </head>
       <body
-        className={cn(
-          "min-h-screen bg-black font-sans antialiased",
-          geist.variable
-        )}
+        className="min-h-screen bg-black font-sans antialiased"
       >
         <main className="relative flex min-h-screen flex-col">
           {children}
