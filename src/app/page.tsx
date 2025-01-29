@@ -64,7 +64,7 @@ export default function HomePage() {
         <h2 className="mb-12 text-3xl font-bold text-white">Latest Tracks</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* 360noscope */}
-          <div className="rounded-lg bg-zinc-900 p-4 shadow-xl">
+          <div className="rounded-lg border-2 border-purple-900/50 bg-zinc-900 p-4 shadow-xl shadow-purple-900/10">
             <iframe
               width="100%"
               height="300"
@@ -76,7 +76,7 @@ export default function HomePage() {
           </div>
 
           {/* deepseek-this */}
-          <div className="rounded-lg bg-zinc-900 p-4 shadow-xl">
+          <div className="rounded-lg border-2 border-purple-900/50 bg-zinc-900 p-4 shadow-xl shadow-purple-900/10">
             <iframe
               width="100%"
               height="300"
@@ -88,7 +88,7 @@ export default function HomePage() {
           </div>
 
           {/* rugpull-romance */}
-          <div className="rounded-lg bg-zinc-900 p-4 shadow-xl">
+          <div className="rounded-lg border-2 border-purple-900/50 bg-zinc-900 p-4 shadow-xl shadow-purple-900/10">
             <iframe
               width="100%"
               height="300"
