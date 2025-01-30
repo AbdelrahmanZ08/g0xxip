@@ -22,7 +22,7 @@ export default function HomePage() {
           <div className="mb-8 flex justify-center">
             <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-purple-300/20 shadow-lg shadow-purple-500/20">
               <Image
-                src="/Images/g0xxip pfp.webp"
+                src="/Images/g0xxip pfp.png"
                 alt="g0xxip profile picture"
                 fill
                 className="object-cover"

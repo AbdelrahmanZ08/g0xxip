@@ -4,7 +4,7 @@ import { XLogo } from './icons/x-logo'
 
 export function SocialLinks() {
   return (
-    <div className="fixed right-6 top-16 z-20 flex items-center gap-4">
+    <div className="fixed right-6 top-12 z-20 flex items-center gap-4">
       <Link
         href="https://twitter.com/g0xxip"
         target="_blank"
