@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   images: {
     remotePatterns: [
       {
@@ -7,6 +8,7 @@ const nextConfig = {
         hostname: '**',
       },
     ],
+    domains: ['open.spotify.com', 'soundcloud.com'],
   },
 }
 

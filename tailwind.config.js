@@ -6,7 +6,14 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'space-mono': ['Space Mono', 'monospace'],
+      },
+      animation: {
+        'spin-slow': 'spin 20s linear infinite',
+      },
+    },
   },
   plugins: [],
 } 

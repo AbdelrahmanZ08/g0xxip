@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import WatchSection from './WatchSection';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,15 +69,7 @@ const Navigation = () => {
           />
         </Link>
         <div className="relative w-full overflow-hidden">
-          <Image
-            src="/Images/hand.png"
-            alt="Hand section"
-            width={1920}
-            height={2500}
-            className="w-full h-[102%] object-cover -mt-1"
-            priority
-            quality={100}
-          />
+          <WatchSection />
         </div>
         <div className="relative w-full overflow-hidden">
           <Image
@@ -99,7 +92,7 @@ const Navigation = () => {
                 <div className="grid grid-cols-3 gap-1 w-full">
                   <div className="aspect-square relative">
                     <Image
-                      src="/Images/songs/rmr.png"
+                      src="/Images/32_00059_x1080.jpg.png"
                       alt="Digital 1"
                       width={180}
                       height={180}
@@ -108,7 +101,7 @@ const Navigation = () => {
                   </div>
                   <div className="aspect-square relative">
                     <Image
-                      src="/Images/songs/parasite.png"
+                      src="/Images/32_00111-2_top_x1080.jpg.png"
                       alt="Digital 2"
                       width={180}
                       height={180}
@@ -117,7 +110,7 @@ const Navigation = () => {
                   </div>
                   <div className="aspect-square relative">
                     <Image
-                      src="/Images/songs/vape cabal.png"
+                      src="/Images/g0xxip2.png"
                       alt="Digital 3"
                       width={180}
                       height={180}
@@ -264,7 +257,7 @@ const Navigation = () => {
         </div>
         {/* Platform Links */}
         <div className="flex justify-between items-center px-4 md:px-8 py-10 bg-white min-w-full">
-          <div className="flex-shrink-0 mx-2">
+          <Link href="https://open.spotify.com/artist/5rnwQwJlKvP03yQQVaiPab" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/Spotify_logo_with_text.svg.webp" 
               alt="Spotify" 
@@ -272,8 +265,8 @@ const Navigation = () => {
               height={30} 
               className="h-10 md:h-12 w-auto object-contain"
             />
-          </div>
-          <div className="flex-shrink-0 mx-2">
+          </Link>
+          <Link href="https://music.amazon.co.uk/artists/B0DVBY4JDC/g0xxip" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/Amazon_Music_logo.svg.png" 
               alt="Amazon Music" 
@@ -281,8 +274,8 @@ const Navigation = () => {
               height={30} 
               className="h-10 md:h-12 w-auto object-contain"
             />
-          </div>
-          <div className="flex-shrink-0 mx-2">
+          </Link>
+          <Link href="https://www.tiktok.com/@g0xxip" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/tiktok-6338432_960_720.webp" 
               alt="TikTok" 
@@ -290,8 +283,8 @@ const Navigation = () => {
               height={30} 
               className="h-10 md:h-12 w-auto object-contain"
             />
-          </div>
-          <div className="flex-shrink-0 mx-2">
+          </Link>
+          <Link href="https://soundcloud.com/g0xxip" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/SoundCloud-01.png" 
               alt="Soundcloud" 
@@ -299,8 +292,8 @@ const Navigation = () => {
               height={30} 
               className="h-20 md:h-24 w-auto object-contain"
             />
-          </div>
-          <div className="flex-shrink-0 mx-2">
+          </Link>
+          <Link href="https://music.apple.com/us/artist/g0xxip/1793176540" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/Apple-Music-Logo-2015-present.png" 
               alt="Apple Music" 
@@ -308,8 +301,8 @@ const Navigation = () => {
               height={30} 
               className="h-10 md:h-12 w-auto object-contain"
             />
-          </div>
-          <div className="flex-shrink-0 mx-2">
+          </Link>
+          <Link href="https://music.youtube.com/channel/UC3ABzwHGTm_ITD3CZ5uayUQ" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/YouTube_Music-Logo.wine.png" 
               alt="YouTube Music" 
@@ -317,7 +310,7 @@ const Navigation = () => {
               height={30} 
               className="h-[75px] md:h-[90px] w-auto object-contain"
             />
-          </div>
+          </Link>
         </div>
       </div>
     </div>
