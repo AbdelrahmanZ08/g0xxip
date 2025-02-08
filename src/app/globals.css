@@ -10,6 +10,13 @@
   font-display: swap;
 }
 
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 /* Cyberpunk Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 12px;

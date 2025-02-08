@@ -9,9 +9,9 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-col items-center w-full bg-white">
+    <div className="flex flex-col items-center w-full bg-white overflow-x-hidden">
       <nav className="sticky top-0 w-full py-2 bg-white z-50">
-        <div className="relative flex flex-col md:flex-row w-full px-4">
+        <div className="relative flex flex-col md:flex-row w-full px-4 max-w-full">
           {/* Mobile Menu Button */}
           <button 
             className="md:hidden absolute right-4 top-2 z-20"
@@ -46,7 +46,7 @@ const Navigation = () => {
       </nav>
 
       {/* Main Content */}
-      <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col items-center w-full overflow-x-hidden">
         <div className="relative w-full">
           <Image
             src="/Images/ABOVE_HERO.jpeg"
