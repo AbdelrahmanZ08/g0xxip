@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: ['g0xxip', 'music', 'artist', 'producer', 'soundcloud'],
   icons: {
     icon: '/Images/deepseek this.png',
-    shortcut: '/Images/deepseek this.png ',
+    shortcut: '/Images/deepseek this.png',
     apple: '/Images/deepseek this.png',
   }
 };
