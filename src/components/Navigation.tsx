@@ -257,58 +257,58 @@ const Navigation = () => {
         </div>
         {/* Platform Links */}
         <div className="flex justify-between items-center px-4 md:px-8 py-10 bg-white min-w-full">
-          <Link href="https://open.spotify.com/artist/5rnwQwJlKvP03yQQVaiPab" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
+          <Link href="https://open.spotify.com/artist/5rnwQwJlKvP03yQQVaiPab" className="flex-shrink-0 mx-1 md:mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/Spotify_logo_with_text.svg.webp" 
               alt="Spotify" 
               width={100} 
               height={30} 
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-8 md:h-12 w-auto object-contain"
             />
           </Link>
-          <Link href="https://music.amazon.co.uk/artists/B0DVBY4JDC/g0xxip" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
+          <Link href="https://music.amazon.co.uk/artists/B0DVBY4JDC/g0xxip" className="flex-shrink-0 mx-1 md:mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/Amazon_Music_logo.svg.png" 
               alt="Amazon Music" 
               width={100} 
               height={30} 
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-8 md:h-12 w-auto object-contain"
             />
           </Link>
-          <Link href="https://www.tiktok.com/@g0xxip" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
+          <Link href="https://www.tiktok.com/@g0xxip" className="flex-shrink-0 mx-1 md:mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/tiktok-6338432_960_720.webp" 
               alt="TikTok" 
               width={30} 
               height={30} 
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-8 md:h-12 w-auto object-contain"
             />
           </Link>
-          <Link href="https://soundcloud.com/g0xxip" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
+          <Link href="https://soundcloud.com/g0xxip" className="flex-shrink-0 mx-1 md:mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/SoundCloud-01.png" 
               alt="Soundcloud" 
               width={100} 
               height={30} 
-              className="h-20 md:h-24 w-auto object-contain"
+              className="h-16 md:h-24 w-auto object-contain"
             />
           </Link>
-          <Link href="https://music.apple.com/us/artist/g0xxip/1793176540" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
+          <Link href="https://music.apple.com/us/artist/g0xxip/1793176540" className="flex-shrink-0 mx-1 md:mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/Apple-Music-Logo-2015-present.png" 
               alt="Apple Music" 
               width={100} 
               height={30} 
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-8 md:h-12 w-auto object-contain"
             />
           </Link>
-          <Link href="https://music.youtube.com/channel/UC3ABzwHGTm_ITD3CZ5uayUQ" className="flex-shrink-0 mx-2 hover:opacity-70 transition-opacity">
+          <Link href="https://music.youtube.com/channel/UC3ABzwHGTm_ITD3CZ5uayUQ" className="flex-shrink-0 mx-1 md:mx-2 hover:opacity-70 transition-opacity">
             <Image 
               src="/Images/icons/YouTube_Music-Logo.wine.png" 
               alt="YouTube Music" 
               width={100} 
               height={30} 
-              className="h-[75px] md:h-[90px] w-auto object-contain"
+              className="h-[60px] md:h-[90px] w-auto object-contain"
             />
           </Link>
         </div>
