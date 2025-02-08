@@ -18,9 +18,23 @@ export const metadata: Metadata = {
   description: 'Official website of g0xxip - Exploring the boundaries of sound',
   keywords: ['g0xxip', 'music', 'artist', 'producer', 'soundcloud'],
   icons: {
-    icon: '/Images/deepseek this.png',
-    shortcut: '/Images/deepseek this.png',
-    apple: '/Images/deepseek this.png',
+    icon: [
+      {
+        url: '/icon.png',
+        type: 'image/png',
+        sizes: '32x32'
+      },
+      {
+        url: '/icon.png',
+        type: 'image/png',
+        sizes: '16x16'
+      }
+    ],
+    apple: {
+      url: '/apple-icon.png',
+      type: 'image/png',
+      sizes: '180x180'
+    }
   }
 };
 
