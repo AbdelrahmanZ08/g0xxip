@@ -236,15 +236,15 @@ const Navigation = () => {
             </div>
             <div className="w-1/2 md:w-1/4 aspect-square relative bg-[#D4B7BE]">
               <div className="absolute inset-0 flex flex-col justify-center gap-8 p-6 text-center">
-                <p className="font-['Terminal'] text-yellow-300 text-[1rem] md:text-[1.25rem] -mb-4">rumor has it<br />ft. rmr</p>
+                <p className="font-['Terminal'] text-yellow-300 text-[1rem] md:text-[1.25rem] -mb-4">rumor has it</p>
                 <Link href="https://www.x.com/whatrmr" className="hover:opacity-70">
-                  <p className="font-['Terminal'] text-yellow-300 text-5xl md:text-6xl">2/14</p>
+                  <p className="font-['Terminal'] text-yellow-300 text-5xl md:text-6xl">2/18</p>
                 </Link>
               </div>
             </div>
             <div className="w-1/2 md:w-1/4 aspect-square relative overflow-hidden">
               <Image
-                src="/Images/rumor has it.png"
+                src="/Images/rumor.png"
                 alt="rumor has it"
                 width={1000}
                 height={1000}

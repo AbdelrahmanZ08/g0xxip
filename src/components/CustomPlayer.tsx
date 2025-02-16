@@ -15,9 +15,9 @@ const songs = [
     image: '/Images/songs/jelly jelly.png'
   },
   {
-    title: 'rumor has it ft. rmr',
+    title: 'rumor has it',
     url: '#',
-    image: '/Images/songs/rmr.png'
+    image: '/Images/rumor.png'
   },
   {
     title: '360noscope',
