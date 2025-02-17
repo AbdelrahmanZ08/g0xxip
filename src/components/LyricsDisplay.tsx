@@ -1,5 +1,12 @@
 import Image from 'next/image';
 
+interface LyricsDisplayProps {
+  lyrics: {
+    type: 'verse' | 'chorus' | 'bridge' | 'pre-chorus' | 'post-chorus' | 'outro';
+    content: string[];
+  }[];
+}
+
 const LyricsDisplay: React.FC<LyricsDisplayProps> = ({ lyrics }) => {
   return (
     <div className="space-y-8">
