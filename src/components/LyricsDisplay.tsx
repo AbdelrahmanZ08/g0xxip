@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { getVerseTypeColor } from '../utils/colors';
 
 interface LyricsDisplayProps {
   lyrics: {
@@ -9,28 +9,24 @@ interface LyricsDisplayProps {
 
 const LyricsDisplay: React.FC<LyricsDisplayProps> = ({ lyrics }) => {
   return (
-    <div className="space-y-8">
-      {lyrics.map((lyric, index) => (
-        <div key={index} className="bg-white rounded-lg shadow-md p-6">
-          <div className="flex items-start gap-6">
-            {lyric.coverImage && (
-              <div className="flex-shrink-0">
-                <Image
-                  src={lyric.coverImage}
-                  alt={`Cover for ${lyric.title}`}
-                  width={120}
-                  height={120}
-                  className="rounded-md"
-                />
-              </div>
-            )}
-            <div className="flex-grow">
-              <h2 className="text-2xl font-bold mb-4">{lyric.title}</h2>
-              <p className="whitespace-pre-line">{lyric.lyrics}</p>
-            </div>
-          </div>
+    <div className="space-y-8 font-['Terminal']">
+      {lyrics.map((verse, index) => (
+        <div key={index} className="space-y-2">
+          <h4 className={`text-sm uppercase ${getVerseTypeColor(verse.type)} mb-2`}>
+            {verse.type}
+          </h4>
+          {verse.content.map((line, lineIndex) => (
+            <p 
+              key={lineIndex} 
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              {line}
+            </p>
+          ))}
         </div>
       ))}
     </div>
   );
-}; 
+};
+
+export default LyricsDisplay; 
