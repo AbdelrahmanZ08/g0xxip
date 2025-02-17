@@ -8,6 +8,15 @@ import WatchSection from './WatchSection';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleLyricsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const lyricsSection = document.getElementById('lyrics');
+    if (lyricsSection) {
+      lyricsSection.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false); // Close mobile menu after clicking
+    }
+  };
+
   return (
     <div className="flex flex-col items-center w-full bg-white overflow-x-hidden">
       <nav className="sticky top-0 w-full py-2 bg-white z-50">
@@ -27,6 +36,7 @@ const Navigation = () => {
 
           {/* Links - full width on mobile, left-aligned on desktop */}
           <div className={`${isMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row items-center md:items-center gap-4 font-space-mono text-[0.75rem] md:text-[0.75rem] lg:text-sm md:w-1/3 md:justify-start md:pl-2 lg:pl-16 xl:pl-24 mt-4 md:mt-0 order-2 md:order-1`}>
+            <a href="#lyrics" onClick={handleLyricsClick} className="hover:opacity-70 underline whitespace-nowrap">Lyrics</a>
             <Link href="https://open.spotify.com/artist/5rnwQwJlKvP03yQQVaiPab" className="hover:opacity-70 underline whitespace-nowrap">Spotify</Link>
             <Link href="https://soundcloud.com/g0xxip" className="hover:opacity-70 underline whitespace-nowrap">Soundcloud</Link>
             <Link href="https://x.com/g0xxip" className="hover:opacity-70 underline whitespace-nowrap">X</Link>

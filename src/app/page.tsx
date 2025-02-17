@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
+import LyricsSection from '@/components/LyricsSection'
 
 export const metadata: Metadata = {
   title: 'g0xxip - Music Portfolio',
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main className="w-full">
+      <LyricsSection />
+      
       {/* Footer */}
       <footer className="w-full border-t border-zinc-800">
         <div className="mx-auto max-w-6xl px-6 py-2">

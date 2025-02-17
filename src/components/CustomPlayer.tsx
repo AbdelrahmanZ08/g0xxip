@@ -7,12 +7,12 @@ const songs = [
   {
     title: 'deepseek this',
     url: 'https://open.spotify.com/track/17tebOMaphmHGKq75IrbE8',
-    image: '/Images/songs/deepseek this.png'
+    image: '/Images/g6.png'
   },
   {
     title: 'jelly jelly',
     url: 'https://soundcloud.com/g0xxip/jelly-jelly',
-    image: '/Images/songs/jelly jelly.png'
+    image: '/Images/g11.png'
   },
   {
     title: 'rumor has it',
