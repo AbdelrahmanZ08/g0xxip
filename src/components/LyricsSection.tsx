@@ -72,7 +72,7 @@ const getVerseTypeColor = (type: string) => {
   }
 };
 
-const RELEASE_DATE = new Date('2024-02-18T21:00:00-08:00'); // 9 PM PST on February 18th, 2024
+const RELEASE_DATE = new Date('2025-02-18T21:00:00-08:00'); // 9 PM PST on February 18th, 2025
 
 const calculateTimeLeft = () => {
   const now = new Date();
@@ -131,9 +131,13 @@ export default function LyricsSection() {
               <h2 className="font-['Terminal'] text-2xl md:text-3xl text-white text-center px-4 mb-2">
                 {song.title}
               </h2>
-              {song.title === 'rumor has it' && timeLeft && (
+              {song.title === 'rumor has it' && (
                 <div className="font-['Terminal'] text-yellow-300 text-lg">
-                  {`${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
+                  {timeLeft ? (
+                    `${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`
+                  ) : (
+                    'Now Available!'
+                  )}
                 </div>
               )}
             </div>
@@ -173,7 +177,7 @@ export default function LyricsSection() {
                   <div className="font-['Terminal'] text-4xl text-white">
                     {`${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
                   </div>
-                  <p className="mt-4 text-gray-400">Coming February 18th at 9 PM PST</p>
+                  <p className="mt-4 text-gray-400">Coming February 18th, 2025 at 9 PM PST</p>
                 </div>
               ) : (
                 <div className="space-y-8 font-['Terminal']">
