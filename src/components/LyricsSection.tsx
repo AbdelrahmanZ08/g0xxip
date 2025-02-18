@@ -72,16 +72,14 @@ const getVerseTypeColor = (type: string) => {
   }
 };
 
-const RELEASE_DATE = new Date();
-RELEASE_DATE.setDate(RELEASE_DATE.getDate() + 1); // tomorrow
-RELEASE_DATE.setHours(21, 0, 0, 0); // 9 PM PST
+const RELEASE_DATE = new Date('2024-02-18T21:00:00-08:00'); // 9 PM PST on February 18th, 2024
 
 const calculateTimeLeft = () => {
   const now = new Date();
   const difference = RELEASE_DATE.getTime() - now.getTime();
   
   if (difference <= 0) {
-    return null;
+    return null; // Past release time
   }
 
   return {
@@ -144,7 +142,7 @@ export default function LyricsSection() {
       </div>
 
       <AnimatePresence>
-        {selectedSong && (selectedSong !== 'rumor has it' || !timeLeft) && lyrics[selectedSong] && (
+        {selectedSong && lyrics[selectedSong] && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
