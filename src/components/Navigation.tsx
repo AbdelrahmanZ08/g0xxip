@@ -10,10 +10,10 @@ const Navigation = () => {
 
   const handleLyricsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const lyricsSection = document.getElementById('lyrics');
-    if (lyricsSection) {
-      lyricsSection.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false); // Close mobile menu after clicking
+    const musicSection = document.querySelector('.music-grid-section');
+    if (musicSection) {
+      musicSection.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
     }
   };
 
@@ -37,12 +37,6 @@ const Navigation = () => {
           {/* Links - full width on mobile, left-aligned on desktop */}
           <div className={`${isMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row items-center md:items-center gap-4 font-space-mono text-[0.75rem] md:text-[0.75rem] lg:text-sm md:w-1/3 md:justify-start md:pl-2 lg:pl-16 xl:pl-24 mt-4 md:mt-0 order-2 md:order-1`}>
             <a href="#lyrics" onClick={handleLyricsClick} className="hover:opacity-70 underline whitespace-nowrap">Lyrics</a>
-            <Link href="https://open.spotify.com/artist/5rnwQwJlKvP03yQQVaiPab" className="hover:opacity-70 underline whitespace-nowrap">Spotify</Link>
-            <Link href="https://soundcloud.com/g0xxip" className="hover:opacity-70 underline whitespace-nowrap">Soundcloud</Link>
-            <Link href="https://x.com/g0xxip" className="hover:opacity-70 underline whitespace-nowrap">X</Link>
-            <Link href="https://www.instagram.com/g0xxip/" className="hover:opacity-70 underline whitespace-nowrap">IG</Link>
-            <Link href="https://www.tiktok.com/@g0xxip" className="hover:opacity-70 underline whitespace-nowrap">TikTok</Link>
-            <Link href="https://dexscreener.com/solana/8egp8few4skyyymweck5tt1greervnewomsyvthuewfg" className="hover:opacity-70 underline whitespace-nowrap">$0x0x•</Link>
           </div>
 
           {/* Logo - centered on mobile and desktop */}
@@ -50,47 +44,108 @@ const Navigation = () => {
             <Link href="/" className="font-['Terminal'] text-[1.5rem] md:text-[1rem] lg:text-[1.25rem] no-underline whitespace-nowrap">g0xxip</Link>
           </div>
 
-          {/* Empty div for spacing on the right */}
-          <div className="hidden md:block md:w-1/3 order-3"></div>
+          {/* Social Links - right side */}
+          <div className="hidden md:flex md:w-1/3 justify-end items-center gap-4 order-3 pr-2 lg:pr-16 xl:pr-24">
+            <Link href="https://open.spotify.com/artist/5rnwQwJlKvP03yQQVaiPab" className="hover:opacity-70 underline whitespace-nowrap">Spotify</Link>
+            <Link href="https://soundcloud.com/g0xxip" className="hover:opacity-70 underline whitespace-nowrap">Soundcloud</Link>
+            <Link href="https://x.com/g0xxip" className="hover:opacity-70 underline whitespace-nowrap">X</Link>
+            <Link href="https://www.instagram.com/g0xxip/" className="hover:opacity-70 underline whitespace-nowrap">IG</Link>
+            <Link href="https://www.tiktok.com/@g0xxip" className="hover:opacity-70 underline whitespace-nowrap">TikTok</Link>
+            <Link href="https://dexscreener.com/solana/8egp8few4skyyymweck5tt1greervnewomsyvthuewfg" className="hover:opacity-70 underline whitespace-nowrap">$0x0x•</Link>
+          </div>
         </div>
       </nav>
 
       {/* Main Content */}
       <div className="flex flex-col items-center w-full overflow-x-hidden">
-        <div className="relative w-full">
-          <Image
-            src="/Images/ABOVE_HERO.jpeg"
-            alt="Crystal banner"
-            width={1920}
-            height={300}
-            className="w-full h-[150px] object-cover object-center"
-            priority
-          />
-        </div>
-        <Link href="https://open.spotify.com/track/7Dr4Pci8FxaoJK1eZuJt4G?si=8f6ecd38ac1a4a96" className="block w-full -mx-[2px]">
-          <Image
-            src="/Images/image.png"
-            alt="Hero image"
-            width={1920}
-            height={1080}
-            className="w-[calc(100%+4px)] h-auto object-cover"
-            priority
-            quality={100}
-          />
+        <Link href="https://open.spotify.com/track/7Dr4Pci8FxaoJK1eZuJt4G?si=8f6ecd38ac1a4a96" className="block w-full">
+          <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
+            <Image
+              src="/Images/hero section image.png"
+              alt="Hero image"
+              fill
+              className="absolute top-0 left-0 w-full h-full object-contain bg-black"
+              priority
+              quality={100}
+            />
+          </div>
         </Link>
         <div className="relative w-full overflow-hidden">
           <WatchSection />
         </div>
         <div className="relative w-full overflow-hidden">
-          <Image
-            src="/Images/0x0x records presents.png"
-            alt="0x0x records presents"
-            width={1920}
-            height={2000}
-            className="w-full h-[102%] object-cover -mt-1"
-            priority
-            quality={100}
-          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+            <div className="relative w-full aspect-square">
+              <Image
+                src="/Images/g0xxip_webpng.png"
+                alt="g0xxip"
+                width={1920}
+                height={1920}
+                className="w-full h-full object-cover"
+                priority
+                quality={100}
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <h1 className="font-['Terminal'] text-white text-4xl md:text-5xl lg:text-6xl text-center">0x0x rec0rds presents</h1>
+              </div>
+              <div className="absolute bottom-8 left-8 max-w-[80%]">
+                <p className="font-['Terminal'] text-white text-sm md:text-base lg:text-lg leading-relaxed">
+                humanoid. part ai. music and identity on the bleeding edge of reality:: embodied beyond binary but fixed in internet culture. music first, chart second, goxxip brings unique flavor to a tasteless space. connected to the web at all times, she represents freedom of expression through a variety of mediums.
+                </p>
+              </div>
+            </div>
+            <div className="relative w-full aspect-square">
+              <div className="grid grid-cols-2 h-full">
+                <div className="relative aspect-square">
+                  <Image
+                    src="/Images/pre_show_walk.jpg"
+                    alt="Pre Show Walk"
+                    width={960}
+                    height={960}
+                    className="w-full h-full object-cover"
+                    priority
+                    quality={100}
+                  />
+                </div>
+                <div className="relative aspect-square">
+                  <Image
+                    src="/Images/g0xxip_show_walk.png"
+                    alt="g0xxip Show Walk"
+                    width={960}
+                    height={960}
+                    className="w-full h-full object-cover"
+                    priority
+                    quality={100}
+                  />
+                </div>
+                <div className="relative aspect-square">
+                  <Image
+                    src="/Images/g17.png"
+                    alt="g17"
+                    width={960}
+                    height={960}
+                    className="w-full h-full object-cover"
+                    priority
+                    quality={100}
+                  />
+                </div>
+                <div className="relative aspect-square">
+                  <Image
+                    src="/Images/g15.png"
+                    alt="g15"
+                    width={960}
+                    height={960}
+                    className="w-full h-full object-cover"
+                    priority
+                    quality={100}
+                  />
+                </div>
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <h2 className="font-['Terminal'] text-white text-4xl md:text-5xl lg:text-7xl text-center drop-shadow-lg">g0xxip girl</h2>
+              </div>
+            </div>
+          </div>
         </div>
         {/* Digitals Section with Spotify */}
         <div className="w-full bg-[#24A3E3] py-8">
@@ -148,13 +203,88 @@ const Navigation = () => {
           </div>
         </div>
         {/* Music Grid Section */}
-        <div className="w-full">
+        <div className="w-full music-grid-section">
           <div className="flex flex-wrap w-full">
             {/* Row 1 */}
+            <div className="w-1/2 md:w-1/4 aspect-square relative bg-pink-500">
+              <div className="absolute inset-0 flex flex-col justify-center gap-8 p-6 text-center">
+                <p className="font-['Terminal'] text-yellow-300 text-[1rem] md:text-[1.25rem] -mb-4">rumor has it</p>
+                <Link href="https://open.spotify.com/track/5scqVjS2QlboGwy5M7tpS9?si=9a278f79cadf47e0" className="hover:opacity-70">
+                  <p className="font-['Terminal'] text-yellow-300 text-5xl md:text-6xl">play.</p>
+                </Link>
+              </div>
+            </div>
+            <div className="w-1/2 md:w-1/4 aspect-square relative overflow-hidden">
+              <Image
+                src="/Images/g0xxip_webpng.png"
+                alt="rumor has it"
+                width={1000}
+                height={1000}
+                className="w-full h-[102%] object-cover -mt-1"
+                priority
+                quality={100}
+              />
+            </div>
+            <div className="w-1/2 md:w-1/4 aspect-square relative bg-black">
+              <div className="absolute inset-0 flex flex-col justify-center gap-8 p-6 text-center">
+                <p className="font-['Terminal'] text-white text-[1rem] md:text-[1.25rem] -mb-4">rug pull romance</p>
+                <Link href="https://open.spotify.com/track/7Dr4Pci8FxaoJK1eZuJt4G?si=1e1b966d6c704d81" className="hover:opacity-70">
+                  <p className="font-['Terminal'] text-white text-5xl md:text-6xl">play.</p>
+                </Link>
+              </div>
+            </div>
+            <div className="w-1/2 md:w-1/4 aspect-square relative">
+              <Image
+                src="/Images/artworks-hGqzSLPzmCzESRHo-qyVo9A-t500x500.jpg"
+                alt="rug pull romance"
+                width={1000}
+                height={1000}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+            {/* Row 2 */}
+            <div className="w-1/2 md:w-1/4 aspect-square relative bg-black">
+              <div className="absolute inset-0 flex flex-col justify-center gap-8 p-6 text-center">
+                <p className="font-['Terminal'] text-white text-[1rem] md:text-[1.25rem] -mb-4">360noscope</p>
+                <Link href="https://open.spotify.com/track/5uiKchhmCjdSciJycm4CXz?si=8aa25f98806e4a76" className="hover:opacity-70">
+                  <p className="font-['Terminal'] text-red-500 text-5xl md:text-6xl">play.</p>
+                </Link>
+              </div>
+            </div>
+            <div className="w-1/2 md:w-1/4 aspect-square relative">
+              <Image
+                src="/Images/songs/360noscope.png"
+                alt="360noscope"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+            <div className="w-1/2 md:w-1/4 aspect-square relative bg-sky-300">
+              <div className="absolute inset-0 flex flex-col justify-center gap-8 p-6 text-center">
+                <p className="font-['Terminal'] text-red-500 text-[1rem] md:text-[1.25rem] -mb-4">jelly, jelly</p>
+                <Link href="https://open.spotify.com/track/7fkhgz0hkzWAHn43d1Tmay?si=0ddcd02a377247ab" className="hover:opacity-70">
+                  <p className="font-['Terminal'] text-red-500 text-5xl md:text-6xl">play.</p>
+                </Link>
+              </div>
+            </div>
+            <div className="w-1/2 md:w-1/4 aspect-square relative">
+              <Image
+                src="/Images/songs/jelly jelly.png"
+                alt="jelly jelly"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+            {/* Row 3 */}
             <div className="w-1/2 md:w-1/4 aspect-square relative bg-purple-600">
               <div className="absolute inset-0 flex flex-col justify-center gap-8 p-6 text-center">
                 <p className="font-['Terminal'] text-white text-[1rem] md:text-[1.25rem] -mb-4">deepseek this</p>
-                <Link href="https://open.spotify.com/track/17tebOMaphmHGKq75IrbE8?si=9588d9651a4d4c4d" className="hover:opacity-70">
+                <Link href="https://open.spotify.com/track/17tebOMaphmHGKq75IrbE8?si=706c83e0f76342e4" className="hover:opacity-70">
                   <p className="font-['Terminal'] text-white text-5xl md:text-6xl">play.</p>
                 </Link>
               </div>
@@ -170,47 +300,10 @@ const Navigation = () => {
                 quality={100}
               />
             </div>
-            <div className="w-1/2 md:w-1/4 aspect-square relative bg-black">
-              <div className="absolute inset-0 flex flex-col justify-center gap-8 p-6 text-center">
-                <p className="font-['Terminal'] text-white text-[1rem] md:text-[1.25rem] -mb-4">360noscope</p>
-                <Link href="https://open.spotify.com/track/5uiKchhmCjdSciJycm4CXz?si=d2a971365a1349b2" className="hover:opacity-70">
-                  <p className="font-['Terminal'] text-red-500 text-5xl md:text-6xl">play.</p>
-                </Link>
-              </div>
-            </div>
-            <div className="w-1/2 md:w-1/4 aspect-square relative">
-              <Image
-                src="/Images/songs/360noscope.png"
-                alt="360noscope"
-                width={500}
-                height={500}
-                className="w-full h-full object-cover"
-                priority
-              />
-            </div>
-            {/* Row 2 */}
-            <div className="w-1/2 md:w-1/4 aspect-square relative bg-sky-300">
-              <div className="absolute inset-0 flex flex-col justify-center gap-8 p-6 text-center">
-                <p className="font-['Terminal'] text-red-500 text-[1rem] md:text-[1.25rem] -mb-4">jelly jelly</p>
-                <Link href="https://soundcloud.com/g0xxip/jelly-jelly?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" className="hover:opacity-70">
-                  <p className="font-['Terminal'] text-red-500 text-5xl md:text-6xl">play.</p>
-                </Link>
-              </div>
-            </div>
-            <div className="w-1/2 md:w-1/4 aspect-square relative">
-              <Image
-                src="/Images/songs/jelly jelly.png"
-                alt="jelly jelly"
-                width={500}
-                height={500}
-                className="w-full h-full object-cover"
-                priority
-              />
-            </div>
             <div className="w-1/2 md:w-1/4 aspect-square relative bg-gray-200">
               <div className="absolute inset-0 flex flex-col justify-center gap-8 p-6 text-center">
-                <p className="font-['Terminal'] text-black text-[1rem] md:text-[1.25rem] -mb-4">parasite</p>
-                <Link href="https://soundcloud.com/g0xxip/parasite?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" className="hover:opacity-70">
+                <p className="font-['Terminal'] text-black text-[1rem] md:text-[1.25rem] -mb-4">paras1te</p>
+                <Link href="https://open.spotify.com/track/0y72ljNQbPQOuxun1NsQay?si=63b505fe9bfa4a1f" className="hover:opacity-70">
                   <p className="font-['Terminal'] text-black text-5xl md:text-6xl">play.</p>
                 </Link>
               </div>
@@ -223,44 +316,6 @@ const Navigation = () => {
                 height={500}
                 className="w-full h-full object-cover"
                 priority
-              />
-            </div>
-            {/* Row 3 */}
-            <div className="w-1/2 md:w-1/4 aspect-square relative bg-black">
-              <div className="absolute inset-0 flex flex-col justify-center gap-8 p-6 text-center">
-                <p className="font-['Terminal'] text-white text-[1rem] md:text-[1.25rem] -mb-4">vape cabal</p>
-                <Link href="https://soundcloud.com/g0xxip/vape-cabal?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" className="hover:opacity-70">
-                  <p className="font-['Terminal'] text-white text-5xl md:text-6xl">play.</p>
-                </Link>
-              </div>
-            </div>
-            <div className="w-1/2 md:w-1/4 aspect-square relative">
-              <Image
-                src="/Images/songs/vape cabal.png"
-                alt="vape cabal"
-                width={500}
-                height={500}
-                className="w-full h-full object-cover"
-                priority
-              />
-            </div>
-            <div className="w-1/2 md:w-1/4 aspect-square relative bg-[#D4B7BE]">
-              <div className="absolute inset-0 flex flex-col justify-center gap-8 p-6 text-center">
-                <p className="font-['Terminal'] text-yellow-300 text-[1rem] md:text-[1.25rem] -mb-4">rumor has it</p>
-                <Link href="https://www.x.com/whatrmr" className="hover:opacity-70">
-                  <p className="font-['Terminal'] text-yellow-300 text-5xl md:text-6xl">2/18</p>
-                </Link>
-              </div>
-            </div>
-            <div className="w-1/2 md:w-1/4 aspect-square relative overflow-hidden">
-              <Image
-                src="/Images/rumor.png"
-                alt="rumor has it"
-                width={1000}
-                height={1000}
-                className="w-full h-[102%] object-cover -mt-1"
-                priority
-                quality={100}
               />
             </div>
           </div>
